@@ -6,14 +6,20 @@
  */
 package com.obs.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.ColumnDefault;
+
 
 
 @Entity
@@ -46,6 +52,9 @@ public class SignUp
 	@ColumnDefault(value="0")
 	@Column(name="status")
 	private int status;
+	
+	@OneToMany(mappedBy="signUp", cascade={CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+	private List<AddPost> posts;
 	
 	public SignUp()
 	{
@@ -132,7 +141,26 @@ public class SignUp
 		this.status = status;
 	}
 
+	/*public List<AddPost> getPosts() {
+		return posts;
+	}
+
+	public void setPosts(List<AddPost> posts) {
+		this.posts = posts;
+	}
+*/
 	
-	
+	/*
+	public void addNewPost(AddPost thePost){
+		
+		 if(posts==null){
+			 posts = new ArrayList<>();
+		 }
+		
+		 posts.add(thePost);
+		 
+		 thePost.setSignUp(this);
+	}
+	*/
 	
 }

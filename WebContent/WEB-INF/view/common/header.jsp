@@ -16,6 +16,7 @@
                                 <a href="#" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
                                 <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
                                 <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
+                                <a href="${pageContext.request.contextPath}/AddNewPost/showFormForAddPost" >Add Post</a>
                             </div>
 
                             <div class="login">
