@@ -61,10 +61,9 @@
     <div id="all">
 <!-- ****************************** Header ************************************* -->
         <jsp:include page="/WEB-INF/view/common/header.jsp"></jsp:include>
-<!-- ****************************** End Header ************************************* -->
+<!-- ****************************** End Header ********************************* -->
         <section>
-            <!-- *** HOMEPAGE CAROUSEL ***
- _________________________________________________________ -->
+            <!-- *** HOMEPAGE CAROUSEL ***  -->
 
             <div class="home-carousel">
 
@@ -144,558 +143,382 @@
             <!-- *** HOMEPAGE CAROUSEL END *** -->
         </section>
 
-        <section class="bar background-white">
+		<!-- Code start -->
+		
+		
+        <div id="content">
             <div class="container">
-                <div class="col-md-12">
+                <p class="text-muted lead text-center">In our Ladies department we offer wide selection of the best products we have found and carefully selected worldwide. Pellentesque habitant morbi tristique senectus et netuss.</p>
 
+                <div class="row products">
 
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="box-simple">
-                                <div class="icon">
-                                    <i class="fa fa-desktop"></i>
-                                </div>
-                                <h3>Webdesign</h3>
-                                <p>Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring.</p>
+                    <div class="col-md-3 col-sm-4">
+                        <div class="product">
+                            <div class="image">
+                                <a href="shop-detail.html">
+                                    <img src="${pageContext.request.contextPath}/resources/img/product1.jpg" alt="" class="img-responsive image1">
+                                </a>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="box-simple">
-                                <div class="icon">
-                                    <i class="fa fa-print"></i>
-                                </div>
-                                <h3>Print</h3>
-                                <p>Advantage old had otherwise sincerity dependent additions. It in adapted natural hastily is justice. Six draw you him full not mean evil. Prepare garrets it expense windows shewing do an.</p>
+                            <!-- /.image -->
+                            <div class="text">
+                                <h3><a href="shop-detail.html">Fur coat with very but very very long name</a></h3>
+                                <p class="price">$143.00</p>
+                                <p class="buttons">
+                                    <a href="shop-detail.html" class="btn btn-default">View detail</a>
+                                    <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                </p>
                             </div>
+                            <!-- /.text -->
                         </div>
-                        <div class="col-md-4">
-                            <div class="box-simple">
-                                <div class="icon">
-                                    <i class="fa fa-globe"></i>
-                                </div>
-                                <h3>SEO and SEM</h3>
-                                <p>Am terminated it excellence invitation projection as. She graceful shy believed distance use nay. Lively is people so basket ladies window expect.</p>
-                            </div>
-                        </div>
+                        <!-- /.product -->
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="box-simple">
-                                <div class="icon">
-                                    <i class="fa fa-lightbulb-o"></i>
-                                </div>
-                                <h3>Consulting</h3>
-                                <p>Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring.</p>
+                    <div class="col-md-3 col-sm-4">
+                        <div class="product">
+                            <div class="image">
+                                <a href="shop-detail.html">
+                                    <img src="${pageContext.request.contextPath}/resources/img/product2.jpg" alt="" class="img-responsive image1">
+                                </a>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="box-simple">
-                                <div class="icon">
-                                    <i class="fa fa-envelope-o"></i>
-                                </div>
-                                <h3>Email Marketing</h3>
-                                <p>Advantage old had otherwise sincerity dependent additions. It in adapted natural hastily is justice. Six draw you him full not mean evil. Prepare garrets it expense windows shewing do an.</p>
+                            <!-- /.image -->
+                            <div class="text">
+                                <h3><a href="shop-detail.html">White Blouse Armani</a></h3>
+                                <p class="price"><del>$280</del> $143.00</p>
+                                <p class="buttons">
+                                    <a href="shop-detail.html" class="btn btn-default">View detail</a>
+                                    <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                </p>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="box-simple">
-                                <div class="icon">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <h3>UX</h3>
-                                <p>Am terminated it excellence invitation projection as. She graceful shy believed distance use nay. Lively is people so basket ladies window expect.</p>
+                            <!-- /.text -->
+
+                            <div class="ribbon sale">
+                                <div class="theribbon">SALE</div>
+                                <div class="ribbon-background"></div>
                             </div>
+                            <!-- /.ribbon -->
+
+                            <div class="ribbon new">
+                                <div class="theribbon">NEW</div>
+                                <div class="ribbon-background"></div>
+                            </div>
+                            <!-- /.ribbon -->
                         </div>
+                        <!-- /.product -->
                     </div>
+
+                    <div class="col-md-3 col-sm-4">
+                        <div class="product">
+                            <div class="image">
+                                <a href="shop-detail.html">
+                                    <img src="${pageContext.request.contextPath}/resources/img/product3.jpg" alt="" class="img-responsive image1">
+                                </a>
+                            </div>
+                            <!-- /.image -->
+                            <div class="text">
+                                <h3><a href="shop-detail.html">Black Blouse Versace</a></h3>
+                                <p class="price">$143.00</p>
+                                <p class="buttons">
+                                    <a href="shop-detail.html" class="btn btn-default">View detail</a>
+                                    <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                </p>
+
+                            </div>
+                            <!-- /.text -->
+                        </div>
+                        <!-- /.product -->
+                    </div>
+
+                    <div class="col-md-3 col-sm-4">
+                        <div class="product">
+                            <div class="image">
+                                <a href="shop-detail.html">
+                                    <img src="${pageContext.request.contextPath}/resources/img/product4.jpg" alt="" class="img-responsive image1">
+                                </a>
+                            </div>
+                            <!-- /.image -->
+                            <div class="text">
+                                <h3><a href="shop-detail.html">Black Blouse Versace</a></h3>
+                                <p class="price">$143.00</p>
+                                <p class="buttons">
+                                    <a href="shop-detail.html" class="btn btn-default">View detail</a>
+                                    <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                </p>
+
+                            </div>
+                            <!-- /.text -->
+                        </div>
+                        <!-- /.product -->
+                    </div>
+
+                    <div class="col-md-3 col-sm-4">
+                        <div class="product">
+                            <div class="image">
+                                <a href="shop-detail.html">
+                                    <img src="${pageContext.request.contextPath}/resources/img/product3.jpg" alt="" class="img-responsive image1">
+                                </a>
+                            </div>
+                            <!-- /.image -->
+                            <div class="text">
+                                <h3><a href="shop-detail.html">White Blouse Armani</a></h3>
+                                <p class="price"><del>$280</del> $143.00</p>
+                                <p class="buttons">
+                                    <a href="shop-detail.html" class="btn btn-default">View detail</a>
+                                    <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                </p>
+                            </div>
+                            <!-- /.text -->
+
+                            <div class="ribbon sale">
+                                <div class="theribbon">SALE</div>
+                                <div class="ribbon-background"></div>
+                            </div>
+                            <!-- /.ribbon -->
+
+                            <div class="ribbon new">
+                                <div class="theribbon">NEW</div>
+                                <div class="ribbon-background"></div>
+                            </div>
+                            <!-- /.ribbon -->
+                        </div>
+                        <!-- /.product -->
+                    </div>
+
+                    <div class="col-md-3 col-sm-4">
+                        <div class="product">
+                            <div class="image">
+                                <a href="shop-detail.html">
+                                    <img src="${pageContext.request.contextPath}/resources/img/product4.jpg" alt="" class="img-responsive image1">
+                                </a>
+                            </div>
+                            <!-- /.image -->
+                            <div class="text">
+                                <h3><a href="shop-detail.html">White Blouse Versace</a></h3>
+                                <p class="price">$143.00</p>
+                                <p class="buttons">
+                                    <a href="shop-detail.html" class="btn btn-default">View detail</a>
+                                    <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                </p>
+
+                            </div>
+                            <!-- /.text -->
+
+                            <div class="ribbon new">
+                                <div class="theribbon">NEW</div>
+                                <div class="ribbon-background"></div>
+                            </div>
+                            <!-- /.ribbon -->
+                        </div>
+                        <!-- /.product -->
+                    </div>
+
+                    <div class="col-md-3 col-sm-4">
+                        <div class="product">
+                            <div class="image">
+                                <a href="shop-detail.html">
+                                    <img src="${pageContext.request.contextPath}/resources/img/product2.jpg" alt="" class="img-responsive image1">
+                                </a>
+                            </div>
+                            <!-- /.image -->
+                            <div class="text">
+                                <h3><a href="shop-detail.html">White Blouse Versace</a></h3>
+                                <p class="price">$143.00</p>
+                                <p class="buttons">
+                                    <a href="shop-detail.html" class="btn btn-default">View detail</a>
+                                    <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                </p>
+
+                            </div>
+                            <!-- /.text -->
+
+                            <div class="ribbon new">
+                                <div class="theribbon">NEW</div>
+                                <div class="ribbon-background"></div>
+                            </div>
+                            <!-- /.ribbon -->
+                        </div>
+                        <!-- /.product -->
+                    </div>
+
+                    <div class="col-md-3 col-sm-4">
+                        <div class="product">
+                            <div class="image">
+                                <a href="shop-detail.html">
+                                    <img src="${pageContext.request.contextPath}/resources/img/product1.jpg" alt="" class="img-responsive image1">
+                                </a>
+                            </div>
+                            <!-- /.image -->
+                            <div class="text">
+                                <h3><a href="shop-detail.html">Fur coat</a></h3>
+                                <p class="price">$143.00</p>
+                                <p class="buttons">
+                                    <a href="shop-detail.html" class="btn btn-default">View detail</a>
+                                    <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                </p>
+
+                            </div>
+                            <!-- /.text -->
+                        </div>
+                        <!-- /.product -->
+                    </div>
+                    <!-- /.col-md-4 -->
+                    
+                    <div class="col-md-3 col-sm-4">
+                        <div class="product">
+                            <div class="image">
+                                <a href="shop-detail.html">
+                                    <img src="${pageContext.request.contextPath}/resources/img/product1.jpg" alt="" class="img-responsive image1">
+                                </a>
+                            </div>
+                            <!-- /.image -->
+                            <div class="text">
+                                <h3><a href="shop-detail.html">Fur coat with very but very very long name</a></h3>
+                                <p class="price">$143.00</p>
+                                <p class="buttons">
+                                    <a href="shop-detail.html" class="btn btn-default">View detail</a>
+                                    <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                </p>
+                            </div>
+                            <!-- /.text -->
+                        </div>
+                        <!-- /.product -->
+                    </div>
+
+                    <div class="col-md-3 col-sm-4">
+                        <div class="product">
+                            <div class="image">
+                                <a href="shop-detail.html">
+                                    <img src="${pageContext.request.contextPath}/resources/img/product3.jpg" alt="" class="img-responsive image1">
+                                </a>
+                            </div>
+                            <!-- /.image -->
+                            <div class="text">
+                                <h3><a href="shop-detail.html">Black Blouse Versace</a></h3>
+                                <p class="price">$143.00</p>
+                                <p class="buttons">
+                                    <a href="shop-detail.html" class="btn btn-default">View detail</a>
+                                    <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                </p>
+
+                            </div>
+                            <!-- /.text -->
+                        </div>
+                        <!-- /.product -->
+                    </div>
+                    
+                    <div class="col-md-3 col-sm-4">
+                        <div class="product">
+                            <div class="image">
+                                <a href="shop-detail.html">
+                                    <img src="${pageContext.request.contextPath}/resources/img/product4.jpg" alt="" class="img-responsive image1">
+                                </a>
+                            </div>
+                            <!-- /.image -->
+                            <div class="text">
+                                <h3><a href="shop-detail.html">Black Blouse Versace</a></h3>
+                                <p class="price">$143.00</p>
+                                <p class="buttons">
+                                    <a href="shop-detail.html" class="btn btn-default">View detail</a>
+                                    <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                </p>
+
+                            </div>
+                            <!-- /.text -->
+                        </div>
+                        <!-- /.product -->
+                    </div>
+
+                    <div class="col-md-3 col-sm-4">
+                        <div class="product">
+                            <div class="image">
+                                <a href="shop-detail.html">
+                                    <img src="${pageContext.request.contextPath}/resources/img/product1.jpg" alt="" class="img-responsive image1">
+                                </a>
+                            </div>
+                            <!-- /.image -->
+                            <div class="text">
+                                <h3><a href="shop-detail.html">Fur coat</a></h3>
+                                <p class="price">$143.00</p>
+                                <p class="buttons">
+                                    <a href="shop-detail.html" class="btn btn-default">View detail</a>
+                                    <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                </p>
+
+                            </div>
+                            <!-- /.text -->
+                        </div>
+                        <!-- /.product -->
+                    </div>
+                    
                 </div>
-            </div>
-        </section>
+                <!-- /.products -->
 
-        <section class="bar background-pentagon no-mb">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="heading text-center">
-                            <h2>Testimonials</h2>
-                        </div>
+                <div class="col-sm-12">
 
-                        <p class="lead">We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us.</p>
+                    <div class="banner">
+                        <a href="#">
+                            <img src="${pageContext.request.contextPath}/resources/img/banner2.jpg" alt="" class="img-responsive">
+                        </a>
+                    </div>
 
+                    <div class="pages">
 
-                        <!-- *** TESTIMONIALS CAROUSEL ***
- _________________________________________________________ -->
+                        <p class="loadMore">
+                            <a href="#" class="btn btn-template-main"><i class="fa fa-chevron-down"></i> Load more</a>
+                        </p>
 
-                        <ul class="owl-carousel testimonials same-height-row">
-                            <li class="item">
-                                <div class="testimonial same-height-always">
-                                    <div class="text">
-                                        <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown
-                                            belly, slightly domed and divided by arches into stiff sections.</p>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="icon"><i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <div class="name-picture">
-                                            <img class="" alt="" src="${pageContext.request.contextPath}/resources/img/person-1.jpg">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
-                                        </div>
-                                    </div>
-                                </div>
+                        <ul class="pagination">
+                            <li><a href="#">&laquo;</a>
                             </li>
-                            <li class="item">
-                                <div class="testimonial same-height-always">
-                                    <div class="text">
-                                        <p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to
-                                            me? " he thought. It wasn't a dream.</p>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="icon"><i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <div class="name-picture">
-                                            <img class="" alt="" src="${pageContext.request.contextPath}/resources/img/person-2.jpg">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <li class="active"><a href="#">1</a>
                             </li>
-                            <li class="item">
-                                <div class="testimonial same-height-always">
-                                    <div class="text">
-                                        <p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
-
-                                        <p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded
-                                            frame.</p>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="icon"><i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <div class="name-picture">
-                                            <img class="" alt="" src="${pageContext.request.contextPath}/resources/img/person-3.png">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <li><a href="#">2</a>
                             </li>
-                            <li class="item">
-                                <div class="testimonial same-height-always">
-                                    <div class="text">
-                                        <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull
-                                            weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
-                                    </div>
-
-                                    <div class="bottom">
-                                        <div class="icon"><i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <div class="name-picture">
-                                            <img class="" alt="" src="${pageContext.request.contextPath}/resources/img/person-4.jpg">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <li><a href="#">3</a>
                             </li>
-                            <li class="item">
-                                <div class="testimonial same-height-always">
-                                    <div class="text">
-                                        <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull
-                                            weather. Drops of rain could be heard hitting the pane, which made him feel quite sad. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made
-                                            him feel quite sad.</p>
-                                    </div>
-
-                                    <div class="bottom">
-                                        <div class="icon"><i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <div class="name-picture">
-                                            <img class="" alt="" src="${pageContext.request.contextPath}/resources/img/person-4.jpg">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <li><a href="#">4</a>
+                            </li>
+                            <li><a href="#">5</a>
+                            </li>
+                            <li><a href="#">&raquo;</a>
                             </li>
                         </ul>
-                        <!-- /.owl-carousel -->
-
-                        <!-- *** TESTIMONIALS CAROUSEL END *** -->
                     </div>
 
                 </div>
-            </div>
-        </section>
-        <!-- /.bar -->
-
-        <section class="bar background-image-fixed-2 no-mb color-white text-center">
-            <div class="dark-mask"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="icon icon-lg"><i class="fa fa-file-code-o"></i>
-                        </div>
-                        <h3 class="text-uppercase">Do you want to see more?</h3>
-                        <p class="lead">We have prepared for you more than 40 different HTML pages, including 5 variations of homepage.</p>
-                        <p class="text-center">
-                            <a href="index2.html" class="btn btn-template-transparent-black btn-lg">Check other homepage</a>
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="bar background-white no-mb">
-            <div class="container">
-
-                <div class="col-md-12">
-                    <div class="heading text-center">
-                        <h2>From our blog</h2>
-                    </div>
-
-                    <p class="lead">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies
-                        mi vitae est. Mauris placerat eleifend leo. <span class="accent">Check our blog!</span>
-                    </p>
-
-                    <!-- *** BLOG HOMEPAGE ***
-_________________________________________________________ -->
-
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="box-image-text blog">
-                                <div class="top">
-                                    <div class="image">
-                                        <img src="${pageContext.request.contextPath}/resources/img/portfolio-4.jpg" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="bg"></div>
-                                    <div class="text">
-                                        <p class="buttons">
-                                            <a href="blog-post.html" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Read more</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h4><a href="blog-post.html">Fashion now</a></h4>
-                                    <p class="author-category">By <a href="#">John Snow</a> in <a href="blog.html">Webdesign</a>
-                                    </p>
-                                    <p class="intro">Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring.</p>
-                                    <p class="read-more"><a href="blog-post.html" class="btn btn-template-main">Continue reading</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.box-image-text -->
-
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="box-image-text blog">
-                                <div class="top">
-                                    <div class="image">
-                                        <img src="${pageContext.request.contextPath}/resources/img/portfolio-3.jpg" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="bg"></div>
-                                    <div class="text">
-                                        <p class="buttons">
-                                            <a href="blog-post.html" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Read more</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h4><a href="blog-post.html">Fashion now</a></h4>
-                                    <p class="author-category">By <a href="#">John Snow</a> in <a href="blog.html">Webdesign</a>
-                                    </p>
-                                    <p class="intro">Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring.</p>
-                                    <p class="read-more"><a href="blog-post.html" class="btn btn-template-main">Continue reading</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.box-image-text -->
-
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="box-image-text blog">
-                                <div class="top">
-                                    <div class="image">
-                                        <img src="${pageContext.request.contextPath}/resources/img/portfolio-5.jpg" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="bg"></div>
-                                    <div class="text">
-                                        <p class="buttons">
-                                            <a href="blog-post.html" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Read more</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h4><a href="blog-post.html">What to do</a></h4>
-                                    <p class="author-category">By <a href="#">John Snow</a> in <a href="blog.html">Webdesign</a>
-                                    </p>
-                                    <p class="intro">Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring.</p>
-                                    <p class="read-more"><a href="blog-post.html" class="btn btn-template-main">Continue reading</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.box-image-text -->
-
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="box-image-text blog">
-                                <div class="top">
-                                    <div class="image">
-                                        <img src="${pageContext.request.contextPath}/resources/img/portfolio-6.jpg" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="bg"></div>
-                                    <div class="text">
-                                        <p class="buttons">
-                                            <a href="blog-post.html" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Read more</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h4><a href="blog-post.html">5 ways to look awesome</a></h4>
-                                    <p class="author-category">By <a href="#">John Snow</a> in <a href="blog.html">Webdesign</a>
-                                    </p>
-                                    <p class="intro">Am terminated it excellence invitation projection as. She graceful shy believed distance use nay. Lively is people.</p>
-                                    <p class="read-more"><a href="blog-post.html" class="btn btn-template-main">Continue reading</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.box-image-text -->
-
-                        </div>
-
-                    </div>
-                    <!-- /.row -->
-
-                    <!-- *** BLOG HOMEPAGE END *** -->
-
-                </div>
+                <!-- /.col-sm-12 -->
 
             </div>
             <!-- /.container -->
-        </section>
-        <!-- /.bar -->
-
-        <section class="bar background-gray no-mb">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="heading text-center">
-                            <h2>Our clients</h2>
-                        </div>
-
-                        <ul class="owl-carousel customers">
-                            <li class="item">
-                                <img src="${pageContext.request.contextPath}/resources/img/customer-1.png" alt="" class="img-responsive">
-                            </li>
-                            <li class="item">
-                                <img src="${pageContext.request.contextPath}/resources/img/customer-2.png" alt="" class="img-responsive">
-                            </li>
-                            <li class="item">
-                                <img src="${pageContext.request.contextPath}/resources/img/customer-3.png" alt="" class="img-responsive">
-                            </li>
-                            <li class="item">
-                                <img src="${pageContext.request.contextPath}/resources/img/customer-4.png" alt="" class="img-responsive">
-                            </li>
-                            <li class="item">
-                                <img src="${pageContext.request.contextPath}/resources/img/customer-5.png" alt="" class="img-responsive">
-                            </li>
-                            <li class="item">
-                                <img src="${pageContext.request.contextPath}/resources/img/customer-6.png" alt="" class="img-responsive">
-                            </li>
-                        </ul>
-                        <!-- /.owl-carousel -->
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-        <!-- *** GET IT ***
-_________________________________________________________ -->
-
-        <div id="get-it">
-            <div class="container">
-                <div class="col-md-8 col-sm-12">
-                    <h3>Do you want cool website like this one?</h3>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                    <a href="#" class="btn btn-template-transparent-primary">Buy this template now</a>
-                </div>
-            </div>
         </div>
+        <!-- /#content -->		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- Code end -->
+
+		
+
+
 
 
         <!-- *** GET IT END *** -->
 
 
-        <!-- *** FOOTER ***
-_________________________________________________________ -->
 
-        <footer id="footer">
-            <div class="container">
-                <div class="col-md-3 col-sm-6">
-                    <h4>About us</h4>
-
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-
-                    <hr>
-
-                    <h4>Join our monthly newsletter</h4>
-
-                    <form>
-                        <div class="input-group">
-
-                            <input type="text" class="form-control">
-
-                            <span class="input-group-btn">
-
-                        <button class="btn btn-default" type="button"><i class="fa fa-send"></i></button>
-
-                    </span>
-
-                        </div>
-                        <!-- /input-group -->
-                    </form>
-
-                    <hr class="hidden-md hidden-lg hidden-sm">
-
-                </div>
-                <!-- /.col-md-3 -->
-
-                <div class="col-md-3 col-sm-6">
-
-                    <h4>Blog</h4>
-
-                    <div class="blog-entries">
-                        <div class="item same-height-row clearfix">
-                            <div class="image same-height-always">
-                                <a href="#">
-                                    <img class="img-responsive" src="${pageContext.request.contextPath}/resources/img/detailsquare.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="name same-height-always">
-                                <h5><a href="#">Blog post name</a></h5>
-                            </div>
-                        </div>
-
-                        <div class="item same-height-row clearfix">
-                            <div class="image same-height-always">
-                                <a href="#">
-                                    <img class="img-responsive" src="${pageContext.request.contextPath}/resources/img/detailsquare.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="name same-height-always">
-                                <h5><a href="#">Blog post name</a></h5>
-                            </div>
-                        </div>
-
-                        <div class="item same-height-row clearfix">
-                            <div class="image same-height-always">
-                                <a href="#">
-                                    <img class="img-responsive" src="${pageContext.request.contextPath}/resources/img/detailsquare.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="name same-height-always">
-                                <h5><a href="#">Very very long blog post name</a></h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="hidden-md hidden-lg">
-
-                </div>
-                <!-- /.col-md-3 -->
-
-                <div class="col-md-3 col-sm-6">
-
-                    <h4>Contact</h4>
-
-                    <p><strong>Universal Ltd.</strong>
-                        <br>13/25 New Avenue
-                        <br>Newtown upon River
-                        <br>45Y 73J
-                        <br>England
-                        <br>
-                        <strong>Great Britain</strong>
-                    </p>
-
-                    <a href="contact.html" class="btn btn-small btn-template-main">Go to contact page</a>
-
-                    <hr class="hidden-md hidden-lg hidden-sm">
-
-                </div>
-                <!-- /.col-md-3 -->
-
-
-
-                <div class="col-md-3 col-sm-6">
-
-                    <h4>Photostream</h4>
-
-                    <div class="photostream">
-                        <div>
-                            <a href="#">
-                                <img src="${pageContext.request.contextPath}/resources/img/detailsquare.jpg" class="img-responsive" alt=resources/img>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <img src="${pageContext.request.contextPath}/resources/img/detailsquare2.jpg" class="img-responsive" alt="#">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <img src="${pageContext.request.contextPath}/resources/img/detailsquare3.jpg" class="img-responsive" alt="#">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <img src="${pageContext.request.contextPath}/resources/img/detailsquare3.jpg" class="img-responsive" alt="#">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <img src="${pageContext.request.contextPath}/resources/img/detailsquare2.jpg" class="img-responsive" alt="#">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <img src="${pageContext.request.contextPath}/resources/img/detailsquare.jpg" class="img-responsive" alt="#">
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- /.col-md-3 -->
-            </div>
-            <!-- /.container -->
-        </footer>
-        <!-- /#footer -->
-
-        <!-- *** FOOTER END *** -->
-
-        <!-- *** COPYRIGHT ***
-_________________________________________________________ -->
-
-        <div id="copyright">
-            <div class="container">
-                <div class="col-md-12">
-                    <p class="pull-left">&copy; 2015. Your company / name goes here</p>
-                    <p class="pull-right">Template by <a href="https://bootstrapious.com">Bootstrapious</a> & <a href="https://fity.cz">Fity.cz</a>
-                         <!-- Not removing these links is part of the license conditions of the template. Thanks for understanding :) If you want to use the template without the attribution links, you can do so after supporting further themes development at https://bootstrapious.com/donate  -->
-                    </p>
-
-                </div>
-            </div>
-        </div>
-        <!-- /#copyright -->
-
-        <!-- *** COPYRIGHT END *** -->
-
+	<!-- ****************************** Header ************************************* -->
+	        <jsp:include page="/WEB-INF/view/common/footer.jsp"></jsp:include>
+	<!-- ****************************** End Header ********************************* -->
 
 
     </div>
