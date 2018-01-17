@@ -1,4 +1,4 @@
-<%@ taglib prefix="from" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <header>
 
             <!-- *** TOP *** -->
@@ -394,30 +394,26 @@
 
         <div class="modal fade" id="singUp-modal" tabindex="-1" role="dialog" aria-labelledby="SingUp" aria-hidden="true">
             <div class="modal-dialog modal-sm">
-
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         <h4 class="modal-title" id="Login">SIGN UP</h4>
                     </div>
                     <div class="modal-body">
-                        <from:form action="signUp" modelAttribute="signUpFrom" method="POST">
+                        <form:form action="signUp" modelAttribute="signUpForm" method="POST">
                         	<div class="form-group">
-                        		<from:input path="fullName" class="form-control" placeholder="Name..."/>
+                        		<form:input path="fullName" class="form-control" placeholder="Name..." required="required"/>
                         	</div>
                         	<div class="form-group">
-                        		<from:input path="email" class="form-control" placeholder="Email..."/>
+                        		<form:input path="email" class="form-control" placeholder="Email..." required="required"/>
                         	</div>
                         	<div class="form-group">
-                        		<from:password path="password" class="form-control" placeholder="Password..."/>
+                        		<form:password path="password" class="form-control" placeholder="Password..." required="required"/>
                         	</div>
-                        	<div class="form-group">
-                                <input type="password" class="form-control" id="" placeholder="Confirm Password..." />
-                            </div>
                             <p class="text-center">
-                                <input type="submit" class="btn btn-template-main" value="Sing Up"><i class="fa fa-sign-in"></i>
+                                <button class="btn btn-template-main"><i class="fa fa-sign-in"></i> Sing Up</button>
                             </p>
-                        </from:form>
+                        </form:form>
                     </div>
                 </div>
             </div>

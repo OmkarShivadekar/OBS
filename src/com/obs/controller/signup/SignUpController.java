@@ -27,13 +27,13 @@ public class SignUpController
 	@GetMapping("/")
 	public String goHome(Model theModel) {
 		SignUp newSignUp=new SignUp();
-		theModel.addAttribute("signUpFrom", newSignUp);
+		theModel.addAttribute("signUpForm", newSignUp);
 		
 		return "home";
 	}
 	
 	@PostMapping("/signUp")
-	public String signUp(@ModelAttribute("signUpFrom") SignUp theSignUp) {
+	public String signUp(@ModelAttribute("signUpForm") SignUp theSignUp) {
 
 		
 		signUpService.newSignUp(theSignUp);
