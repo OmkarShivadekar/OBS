@@ -412,7 +412,7 @@
                         		<form:password path="password" class="form-control" placeholder="Password..." required="required"/>
                         	</div>
                             <p class="text-center">
-                                <button class="btn btn-template-main"><i class="fa fa-sign-in"></i> Sing Up</button>
+                                <button class="btn btn-template-main"><i class="fa fa-sign-in"></i> Sign Up</button>
                             </p>
                         </form:form>
                     </div>
