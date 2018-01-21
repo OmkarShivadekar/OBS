@@ -34,9 +34,9 @@ public class SignUpController
 	
 	@PostMapping("/signUp")
 	public String signUp(@ModelAttribute("signUpFrom") SignUp theSignUp) {
-
 		
 		signUpService.newSignUp(theSignUp);
 		return "redirect:/HOME/";
+		
 	}
 }
