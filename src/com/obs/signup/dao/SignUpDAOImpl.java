@@ -4,7 +4,7 @@
  *     Date : 13-Jan-2018
  *     Time : 5:46:36 PM
  */
-package com.obs.dao.signup;
+package com.obs.signup.dao;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

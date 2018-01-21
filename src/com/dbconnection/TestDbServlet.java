@@ -1,4 +1,4 @@
-package com.obs.dbconnection;
+package com.dbconnection;
 
 import java.io.IOException;
 import java.io.PrintWriter;

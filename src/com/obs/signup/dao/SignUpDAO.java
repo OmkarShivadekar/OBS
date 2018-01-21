@@ -4,7 +4,7 @@
  *     Date : 13-Jan-2018
  *     Time : 5:43:19 PM
  */
-package com.obs.dao.signup;
+package com.obs.signup.dao;
 
 import com.obs.entity.SignUp;
 

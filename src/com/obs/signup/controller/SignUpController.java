@@ -4,7 +4,7 @@
  *     Date : 13-Jan-2018
  *     Time : 5:35:19 PM
  */
-package com.obs.controller.signup;
+package com.obs.signup.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,16 +27,16 @@ public class SignUpController
 	@GetMapping("/")
 	public String goHome(Model theModel) {
 		SignUp newSignUp=new SignUp();
-		theModel.addAttribute("signUpFrom", newSignUp);
+		theModel.addAttribute("signUpForm", newSignUp);
 		
 		return "home";
 	}
 	
 	@PostMapping("/signUp")
-	public String signUp(@ModelAttribute("signUpFrom") SignUp theSignUp) {
+	public String signUp(@ModelAttribute("signUpForm") SignUp theSignUp) {
+
 		
 		signUpService.newSignUp(theSignUp);
 		return "redirect:/HOME/";
-		
 	}
 }
