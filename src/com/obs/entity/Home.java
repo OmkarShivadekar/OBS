@@ -5,7 +5,7 @@
  * 		Time : 9:59:42 PM
  */
 
-package com.obs.home.entity;
+package com.obs.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

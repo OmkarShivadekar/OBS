@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%--
  -   Author : HIMANSHU PATEL
  - Document : file_name
@@ -146,7 +147,41 @@
 		<!-- Code start -->
 		
 		
-        <div id="content">
+		<div id="content">
+		
+			HI this is sarang kamble...
+			
+			<table>
+				<thead>
+					<tr>
+						<th style="width: 120px;">post title</th>
+						<th style="width: 120px;">book category</th>
+						<th style="width: 120px;">description</th>
+						<th style="width: 120px;">price</th>
+						<th style="width: 120px;">photo1</th>
+					</tr>
+				</thead>
+				
+ 				<tbody>
+					
+					<c:forEach var="display" items="${displaybooks}">
+						
+						<tr>
+							<td style="width: 120px;">${ display.postTitle }</td>
+							<td style="width: 120px;">${ display.bookCategory }</td>
+							<td style="width: 120px;">${ display.description }</td>
+							<td style="width: 120px;">${ display.price }</td>
+							<td style="width: 120px;">${ display.photo1 }</td>
+						</tr>
+						
+					</c:forEach>
+				
+				</tbody>
+			</table>
+		
+		</div>
+		
+<%--         <div id="content">
             <div class="container">
                 <p class="text-muted lead text-center">In our Ladies department we offer wide selection of the best products we have found and carefully selected worldwide. Pellentesque habitant morbi tristique senectus et netuss.</p>
 
@@ -489,7 +524,7 @@
 
             </div>
             <!-- /.container -->
-        </div>
+        </div> --%>
         <!-- /#content -->		
 		
 		
