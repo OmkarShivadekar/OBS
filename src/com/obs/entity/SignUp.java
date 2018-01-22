@@ -150,7 +150,7 @@ public class SignUp
 	}
 */
 	
-	/*
+	
 	public void addNewPost(AddPost thePost){
 		
 		 if(posts==null){
@@ -161,6 +161,6 @@ public class SignUp
 		 
 		 thePost.setSignUp(this);
 	}
-	*/
+	
 	
 }

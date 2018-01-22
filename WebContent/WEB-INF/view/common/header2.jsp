@@ -1,4 +1,4 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="from" uri="http://www.springframework.org/tags/form" %>
 <header>
 
             <!-- *** TOP *** -->
@@ -12,15 +12,15 @@
                         </div>
                         <div class="col-xs-7">
                             <div class="social">
-                                <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
+                               <!--  <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
                                 <a href="#" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
                                 <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
-                                <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
+                                <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a> -->
                             </div>
 
                             <div class="login">
-                                <a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Sign in</span></a>
-                                <a href="#" data-toggle="modal" data-target="#singUp-modal"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Sign up</span></a>
+                                <!-- <a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Sign in</span></a> -->
+                                <a href="#" data-toggle="modal" data-target="#singUp-modal"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Welcome User_Name</span></a>
                                 <a href="${pageContext.request.contextPath}/AddNewPost/showFormForAddPost"><i class="fa fa-plus"></i> <span class="hidden-xs text-uppercase">Add Post</span></a>
                             </div>
 
@@ -359,65 +359,10 @@
 
         <!-- *** LOGIN MODAL *** -->
 
-        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
-            <div class="modal-dialog modal-sm">
-
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="Login">Customer login</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form action="customer-orders.html" method="post">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="email_modal" placeholder="email">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" id="password_modal" placeholder="password">
-                            </div>
-                            <p class="text-center">
-                                <button class="btn btn-template-main"><i class="fa fa-sign-in"></i> Log in</button>
-                            </p>
-
-                        </form>
-
-                        <p class="text-center text-muted">Not registered yet?</p>
-                        <p class="text-center text-muted"><a href="customer-register.html"><strong>Register now</strong></a>! It is easy and done in 1&nbsp;minute and gives you access to special discounts and much more!</p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- *** LOGIN MODAL END *** -->
         
-         <!-- *** Registration  MODAL *** -->
+        <!-- *** Registration  MODAL *** -->
 
-        <div class="modal fade" id="singUp-modal" tabindex="-1" role="dialog" aria-labelledby="SingUp" aria-hidden="true">
-            <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="Login">SIGN UP</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form:form action="signUp" modelAttribute="signUpForm" method="POST">
-                        	<div class="form-group">
-                        		<form:input path="fullName" class="form-control" placeholder="Name..." required="required"/>
-                        	</div>
-                        	<div class="form-group">
-                        		<form:input path="email" class="form-control" placeholder="Email..." required="required"/>
-                        	</div>
-                        	<div class="form-group">
-                        		<form:password path="password" class="form-control" placeholder="Password..." required="required"/>
-                        	</div>
-                            <p class="text-center">
-                                <button class="btn btn-template-main"><i class="fa fa-sign-in"></i> Sign Up</button>
-                            </p>
-                        </form:form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+       
         <!-- *** Registration MODAL END *** -->
