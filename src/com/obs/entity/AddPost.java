@@ -9,8 +9,13 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.ColumnDefault;
+import org.springframework.web.multipart.MultipartFile;
 
 
 @Entity
@@ -22,26 +27,44 @@ public class AddPost {
 	@Column(name="id")
 	private int id;
 	
+	@NotEmpty(message="This is a required field")
+	@NotNull(message="This is a required field")
 	@Column(name="post_title")
 	private String postTitle;
 	
+	@NotNull(message="This is a required field")
+	@NotEmpty(message="This is a required field")
 	@Column(name="book_category")
 	private String bookCategory;
 	
+	@NotNull(message="This is a required field")
+	@NotEmpty(message="This is a required field")
 	@Column(name="description")
 	private String description;
 	
+	@NotNull(message="This is a required field")
+	@Min(value=0, message="The Price must be greater than or equal to 0")
 	@Column(name="price")
 	private int price;
 	
 	@Column(name="photo1")
 	private String photo1;
 	
+	@Transient
+	@NotNull(message="This is a required field")
+	private MultipartFile imagefile1; 
+	
 	@Column(name="photo2")
 	private String photo2;
 	
+	@Transient
+	private MultipartFile imagefile2; 
+	
 	@Column(name="photo3")
 	private String photo3;
+	
+	@Transient
+	private MultipartFile imagefile3; 
 	
 	@Column(name="date")
 	private String date;
@@ -135,6 +158,14 @@ public class AddPost {
 	public void setPhoto1(String photo1) {
 		this.photo1 = photo1;
 	}
+	
+	public MultipartFile getImagefile1() {
+		return imagefile1;
+	}
+
+	public void setImagefile1(MultipartFile imagefile1) {
+		this.imagefile1 = imagefile1;
+	}
 
 	public String getPhoto2() {
 		return photo2;
@@ -143,11 +174,26 @@ public class AddPost {
 	public void setPhoto2(String photo2) {
 		this.photo2 = photo2;
 	}
+	
+	public MultipartFile getImagefile2() {
+		return imagefile2;
+	}
+
+	public void setImagefile2(MultipartFile imagefile2) {
+		this.imagefile2 = imagefile2;
+	}
+
+	public MultipartFile getImagefile3() {
+		return imagefile3;
+	}
+
+	public void setImagefile3(MultipartFile imagefile3) {
+		this.imagefile3 = imagefile3;
+	}
 
 	public String getPhoto3() {
 		return photo3;
 	}
-
 	public void setPhoto3(String photo3) {
 		this.photo3 = photo3;
 	}
