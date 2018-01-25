@@ -6,6 +6,12 @@
  */
 package com.obs.home.dao;
 
+import java.util.List;
+
+import com.obs.entity.Home;
+
 public interface HomeDAO {
+
+	List<Home> getBookDetails();
 
 }

@@ -21,10 +21,10 @@ public class TestDbServlet extends HttpServlet {
 		String driver="com.mysql.jdbc.Driver";
 		try {
 			PrintWriter out=response.getWriter();
-			out.print("Connection "+url);
+			out.println("Connection "+url);
 			Class.forName(driver);
 			Connection myConn = DriverManager.getConnection(url,user,pass);
-			out.print("SUCCESS!");
+			out.println("SUCCESS!");
 			myConn.close();
 		} catch (Exception e) {
 			e.printStackTrace();
