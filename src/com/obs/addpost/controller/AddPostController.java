@@ -63,34 +63,39 @@ public class AddPostController {
 			
 			ServletContext context = session.getServletContext();  
 		    String path = context.getRealPath(UPLOAD_DIRECTORY);
-
+		    int counter=0;
+		    String fileName1 = "IMG_" + new SimpleDateFormat("yyyyMMdd_HHmmss_"+(++counter)+"'.jpg'").format(new Date());
+		    String fileName2 = "IMG_" + new SimpleDateFormat("yyyyMMdd_HHmmss_"+(++counter)+"'.jpg'").format(new Date());
+		    String fileName3 = "IMG_" + new SimpleDateFormat("yyyyMMdd_HHmmss_"+(++counter)+"'.jpg'").format(new Date());
+		    
+		    
 		    if(!file1.getOriginalFilename().equals("")){
-		    	newPost.setPhoto1(path + File.separator + file1.getOriginalFilename());
+		    	newPost.setPhoto1(fileName1);
 		    }
 		    
 		    if(!file2.getOriginalFilename().equals("")){
-		    	newPost.setPhoto2(path + File.separator + file2.getOriginalFilename());
+		    	newPost.setPhoto2(fileName2);
 		    }
 		    
 		    if(!file3.getOriginalFilename().equals("")){
-		    	newPost.setPhoto3(path + File.separator + file3.getOriginalFilename());
+		    	newPost.setPhoto3(fileName3);
 		    }
 		    
 			addPostService.savePost(newPost);
 		    
 		    // method 3
 			if(!file1.getOriginalFilename().equals("")){
-			    File tmpFile1 = new File(path + File.separator + file1.getOriginalFilename());
+			    File tmpFile1 = new File(path + File.separator + fileName1);
 			    file1.transferTo(tmpFile1);
 			}
 			
 		    if(!file2.getOriginalFilename().equals("")){
-			    File tmpFile2 = new File(path + File.separator + file2.getOriginalFilename());
+			    File tmpFile2 = new File(path + File.separator + fileName2);
 			    file2.transferTo(tmpFile2);
 		    }
 		    
-		    if(!file3.getOriginalFilename().equals("")){
-			    File tmpFile3 = new File(path + File.separator + file3.getOriginalFilename());
+		    if(!file3.getOriginalFilename().equals("")){ 
+			    File tmpFile3 = new File(path + File.separator + fileName3);
 			    file3.transferTo(tmpFile3);
 		    }
 
