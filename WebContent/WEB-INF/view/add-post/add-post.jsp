@@ -61,7 +61,7 @@
     <style type="text/css">
     
     	#photoDiv{
-    		max-height: 455px; 
+    		max-height: 500px; 
     	}
     	
     	form{
@@ -203,8 +203,8 @@
 	                                            	<i id="remove1" onclick="removePhoto(1)" class="fa fa-times-circle"></i>
 	                                            </span>
 	                                            
-	                                            <form:input type='file' path="imagefile1" id="imgInp1" />
-								       			<img id="blah1"  src="#" alt="your image" />
+	                                            <form:input type='file' path="imagefile" id="imgInp1" />
+								       			<img id="blah1" name="blah1"  src="#" alt="your image" />
 		                                            
 		                                    </div>
 		                                    <div class="col-sm-4" id="div-sm-42">
@@ -219,7 +219,7 @@
 	                                            	<i id="remove2" onclick="removePhoto(2)" class="fa fa-times-circle"></i>
 	                                            </span>
 	                                            
-	                                            <form:input type='file' path="imagefile2" id="imgInp2" />
+	                                            <form:input type='file' path="imagefile" id="imgInp2" />
 								       			<img id="blah2" src="#" alt="your image" />
 		                                        
 		                                    </div>
@@ -236,12 +236,12 @@
 	                                            	<i id="remove3" onclick="removePhoto(3)"class="fa fa-times-circle"></i>
 	                                            </span>
 	                                            
-	                                            <form:input type='file' path="imagefile3" id="imgInp3" />
+	                                            <form:input type='file' path="imagefile" id="imgInp3" />
 								       			<img id="blah3"  src="#" alt="your image" />
 		                                        
 		                                    </div>
 		                            </div>
-		                            <form:errors path="imagefile1" cssClass="error" />
+		                            <form:errors path="imagefile" cssClass="error" />
 		                            </div>
 		                            <div class="col-sm-12">
 			                            <div class="form-group" id="priceDiv">
@@ -372,6 +372,24 @@
 	<script type="text/javascript">
 	
 	function loadIt(num){
+		
+
+		$('#blah1').change(function(e) {
+			alert();
+			var file = e.target.files[0];
+				canvasResize(file, {
+				width: 300,
+				height: 0,
+				crop: false,
+				quality: 80,
+				//rotate: 90,
+				callback: function(data, width, height) {
+					$(img).attr('src', data);
+				}
+			});
+			
+		});
+		
 		function readURL(input) {
 	        if (input.files && input.files[0]) {
 	            var reader = new FileReader();
@@ -400,6 +418,7 @@
 
 		$('#removeSpan'+num).attr('style', 'visibility:hidden');
 	}
+	
 	
 	</script>
 
