@@ -1,6 +1,9 @@
 package com.obs.addpost.controller;
 
+import java.io.BufferedOutputStream;
 import java.io.File;
+import java.io.FileOutputStream;
+import java.nio.file.Files;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -57,44 +60,40 @@ public class AddPostController {
 			String requiredDate = sdf.format(new Date()).toString();		
 			newPost.setDate(requiredDate);
 			
-			MultipartFile file1 = newPost.getImagefile1();
-			MultipartFile file2 = newPost.getImagefile2();
-			MultipartFile file3 = newPost.getImagefile3();		
+			MultipartFile[] files = newPost.getImagefile();		
 			
 			ServletContext context = session.getServletContext();  
 		    String path = context.getRealPath(UPLOAD_DIRECTORY);
-
-		    if(!file1.getOriginalFilename().equals("")){
-		    	newPost.setPhoto1(path + File.separator + file1.getOriginalFilename());
-		    }
 		    
-		    if(!file2.getOriginalFilename().equals("")){
-		    	newPost.setPhoto2(path + File.separator + file2.getOriginalFilename());
-		    }
 		    
-		    if(!file3.getOriginalFilename().equals("")){
-		    	newPost.setPhoto3(path + File.separator + file3.getOriginalFilename());
+		    int counter=1;
+		    for (MultipartFile file : files) {
+		    	
+		    	if(!file.getOriginalFilename().equals("")){
+			    	String fileName = "IMG_" + new SimpleDateFormat("yyyyMMdd_HHmmss_"+(counter)+"'.jpg'").format(new Date()); 
+			    	
+			    	byte[] bytes = file.getBytes();
+				    File serverFile = new File(path + File.separator + fileName);
+					BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(serverFile));
+					stream.write(bytes);
+					stream.close();
+					
+					switch (counter) {
+						case 1:
+							newPost.setPhoto1(fileName);
+							break;
+						case 2:
+							newPost.setPhoto2(fileName);
+							break;
+						case 3:
+							newPost.setPhoto3(fileName);
+							break;
+					}
+		    	}
+				counter++;
 		    }
-		    
-			addPostService.savePost(newPost);
-		    
-		    // method 3
-			if(!file1.getOriginalFilename().equals("")){
-			    File tmpFile1 = new File(path + File.separator + file1.getOriginalFilename());
-			    file1.transferTo(tmpFile1);
-			}
-			
-		    if(!file2.getOriginalFilename().equals("")){
-			    File tmpFile2 = new File(path + File.separator + file2.getOriginalFilename());
-			    file2.transferTo(tmpFile2);
-		    }
-		    
-		    if(!file3.getOriginalFilename().equals("")){
-			    File tmpFile3 = new File(path + File.separator + file3.getOriginalFilename());
-			    file3.transferTo(tmpFile3);
-		    }
-
-	    	
+		   
+		    addPostService.savePost(newPost);	    	
 	    	return "redirect:/AddNewPost/showFormForAddPost";
 	    }
 	    
