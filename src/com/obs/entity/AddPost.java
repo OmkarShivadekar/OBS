@@ -51,19 +51,14 @@ public class AddPost {
 	
 	@Transient
 	@NotNull(message="This is a required field")
-	private MultipartFile imagefile1; 
+	@NotEmpty(message="This is a required field")
+	private MultipartFile[] imagefile; 
 	
 	@Column(name="photo2")
 	private String photo2;
 	
-	@Transient
-	private MultipartFile imagefile2; 
-	
 	@Column(name="photo3")
 	private String photo3;
-	
-	@Transient
-	private MultipartFile imagefile3; 
 	
 	@Column(name="date")
 	private String date;
@@ -157,13 +152,13 @@ public class AddPost {
 	public void setPhoto1(String photo1) {
 		this.photo1 = photo1;
 	}
-	
-	public MultipartFile getImagefile1() {
-		return imagefile1;
+
+	public MultipartFile[] getImagefile() {
+		return imagefile;
 	}
 
-	public void setImagefile1(MultipartFile imagefile1) {
-		this.imagefile1 = imagefile1;
+	public void setImagefile(MultipartFile[] imagefile) {
+		this.imagefile = imagefile;
 	}
 
 	public String getPhoto2() {
@@ -174,22 +169,6 @@ public class AddPost {
 		this.photo2 = photo2;
 	}
 	
-	public MultipartFile getImagefile2() {
-		return imagefile2;
-	}
-
-	public void setImagefile2(MultipartFile imagefile2) {
-		this.imagefile2 = imagefile2;
-	}
-
-	public MultipartFile getImagefile3() {
-		return imagefile3;
-	}
-
-	public void setImagefile3(MultipartFile imagefile3) {
-		this.imagefile3 = imagefile3;
-	}
-
 	public String getPhoto3() {
 		return photo3;
 	}
