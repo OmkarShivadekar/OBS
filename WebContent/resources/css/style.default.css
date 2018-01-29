@@ -1727,7 +1727,7 @@ fieldset[disabled] .btn-template-primary.active {
 }
 #heading-breadcrumbs {
   background: url('../img/texture-bw.png') center center repeat;
-  padding: 20px 0;
+  padding: 5px 0;
   margin-bottom: 40px;
 }
 #heading-breadcrumbs.no-mb {

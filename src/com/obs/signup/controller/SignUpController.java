@@ -24,13 +24,13 @@ public class SignUpController
 	@Autowired
 	private SignUpService signUpService;
 	
-	@GetMapping("/")
-	public String goHome(Model theModel) {
-		SignUp newSignUp=new SignUp();
-		theModel.addAttribute("signUpForm", newSignUp);
-		
-		return "home";
-	}
+//	@GetMapping("/")
+//	public String goHome(Model theModel) {
+//		SignUp newSignUp=new SignUp();
+//		theModel.addAttribute("signUpForm", newSignUp);
+//		
+//		return "home";
+//	}
 	
 	@PostMapping("/signUp")
 	public String signUp(@ModelAttribute("signUpForm") SignUp theSignUp) {
