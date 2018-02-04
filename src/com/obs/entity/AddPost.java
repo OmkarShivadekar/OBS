@@ -33,9 +33,8 @@ public class AddPost {
 	private String postTitle;
 	
 	@NotNull(message="This is a required field")
-	@NotEmpty(message="This is a required field")
-	@Column(name="book_category")
-	private String bookCategory;
+	@Column(name="book_category_id")
+	private int bookCategory;
 	
 	@NotNull(message="This is a required field")
 	@NotEmpty(message="This is a required field")
@@ -84,18 +83,19 @@ public class AddPost {
 	@JoinColumn(name="user_master_id")
 	private SignUp signUp;
 	
+	
 	public AddPost() {
 		
 	}
 
-	public AddPost(String postTitle, String bookCategory, String description, int price, String photo1, String photo2,
+	public AddPost(String postTitle, String description, int price, String photo1, MultipartFile[] imagefile, String photo2, 
 			String photo3, String date, String authorName, String isbn, String language, String binding, int status) {
 		super();
 		this.postTitle = postTitle;
-		this.bookCategory = bookCategory;
 		this.description = description;
 		this.price = price;
 		this.photo1 = photo1;
+		this.imagefile = imagefile;
 		this.photo2 = photo2;
 		this.photo3 = photo3;
 		this.date = date;
@@ -122,11 +122,11 @@ public class AddPost {
 		this.postTitle = postTitle;
 	}
 
-	public String getBookCategory() {
+	public int getBookCategory() {
 		return bookCategory;
 	}
 
-	public void setBookCategory(String bookCategory) {
+	public void setBookCategory(int bookCategory) {
 		this.bookCategory = bookCategory;
 	}
 
@@ -235,7 +235,7 @@ public class AddPost {
 
 	@Override
 	public String toString() {
-		return "AddPost [postTitle=" + postTitle + ", bookCategory=" + bookCategory + ", description=" + description
+		return "AddPost [postTitle=" + postTitle + ",  description=" + description
 				+ ", price=" + price + ", photo1=" + photo1 + ", photo2=" + photo2 + ", photo3=" + photo3 + ", date="
 				+ date + ", authorName=" + authorName + ", isbn=" + isbn + ", language=" + language + ", binding="
 				+ binding + ", status=" + status + "]";
