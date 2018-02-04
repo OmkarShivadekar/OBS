@@ -17,7 +17,6 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.annotations.ColumnDefault;
 import org.springframework.web.multipart.MultipartFile;
 
-
 @Entity
 @Table(name="book_details_master")
 public class AddPost {
