@@ -59,6 +59,8 @@ public class AddPostController {
 			    
 	    if(bindingResult.hasErrors()){
 	    	//System.out.println("error" + bindingResult);
+	    	List<String> bookCategoryList =  addPostService.getBookCategoryList();
+	    	session.setAttribute("bookCategoryList", bookCategoryList);
 	    	return "add-post/add-post";
 	    }else{
 	    	

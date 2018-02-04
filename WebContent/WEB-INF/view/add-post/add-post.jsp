@@ -169,6 +169,7 @@
 	                                    <div class="form-group">
 	                                        <label for="bookCategory">Category</label>
 	                                        <form:select path="bookCategory" class="form-control" >
+	                                        	<option value="">Select Category</option>
 	                                        	<c:forEach var="bookCategoryList" items="${bookCategoryList}">
 	                                        		<option value="${bookCategoryList.id}" >${bookCategoryList.categoryName}</option>
 	                                        	</c:forEach>
