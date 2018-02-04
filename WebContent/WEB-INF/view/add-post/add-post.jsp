@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
     
     <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%--
  -   Author : HIMANSHU PATEL
  - Document : file_name
@@ -168,12 +169,9 @@
 	                                    <div class="form-group">
 	                                        <label for="bookCategory">Category</label>
 	                                        <form:select path="bookCategory" class="form-control" >
-	                                        	<option value="">Select Category</option>
-	                                        	<option value="1">Action</option>
-	                                        	<option value="2">Adventure</option>
-	                                        	<option value="3">Fiction</option>
-	                                        	<option value="4">Non-Fiction</option>
-	                                        	<option value="5">Travel</option>
+	                                        	<c:forEach var="bookCategoryList" items="${bookCategoryList}">
+	                                        		<option value="${bookCategoryList.id}" >${bookCategoryList.categoryName}</option>
+	                                        	</c:forEach>
 	                                        </form:select>
 	                                        <form:errors path="bookCategory" cssClass="error" />
 	                                    </div>
