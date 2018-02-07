@@ -19,13 +19,17 @@ public class SignUpServiceImpl implements SignUpService
 	@Autowired
 	private SignUpDAO signUpDAO;
 
-	/* (non-Javadoc)
-	 * @see com.obs.service.signup.SignUpService#newSignUp(com.obs.entity.SignUp)
-	 */
 	@Override
 	@Transactional
 	public void newSignUp(SignUp theSignUp)
 	{
 		signUpDAO.newSignUp(theSignUp);
+	}
+
+	@Override
+	@Transactional
+	public void loginFb(SignUp theSignUp) {
+		
+		signUpDAO.loginFb(theSignUp);
 	}
 }
