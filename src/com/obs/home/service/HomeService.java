@@ -16,4 +16,6 @@ public interface HomeService {
 
 	public AddPost getBook(int theId);
 
+	public List<AddPost> getCategoryBook(String bookCategory);
+
 }

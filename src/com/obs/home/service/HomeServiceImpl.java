@@ -35,4 +35,11 @@ public class HomeServiceImpl implements HomeService {
 		return homeDAO.getBook(theId);
 	}
 
+	@Override
+	@Transactional
+	public List<AddPost> getCategoryBook(String bookCategory) {
+
+		return homeDAO.getCategoryBook(bookCategory);
+	}
+
 }

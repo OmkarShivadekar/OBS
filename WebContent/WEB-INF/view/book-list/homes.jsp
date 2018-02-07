@@ -26,7 +26,7 @@
 	                            <!-- /.image -->
 	                            <div class="text">
 	                                <h3><a href="${bookInfo}">${print.postTitle}</a></h3>
-	                                <p class="price">${print.price}</p>
+	                                <p class="price">Rs ${print.price}</p>
 <!-- 	                                <p class="buttons">
 	                                    <a href="shop-detail.html" class="btn btn-default">View detail</a>
 	                                    <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to cart</a>
