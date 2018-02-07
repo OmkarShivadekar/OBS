@@ -152,7 +152,7 @@ public class SignUp
 	
 	
 	public void addNewPost(AddPost thePost){
-		
+		 
 		 if(posts==null){
 			 posts = new ArrayList<>();
 		 }

@@ -5,7 +5,9 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.nio.file.Files;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpSession;
@@ -25,6 +27,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.obs.addpost.dao.AddPostDAO;
+import com.obs.addpost.dao.AddPostImpl;
 import com.obs.addpost.service.AddPostService;
 import com.obs.entity.AddPost;
 
@@ -42,8 +46,10 @@ public class AddPostController {
 	public String showFormForAddPost(Model model){
 		
 		AddPost thePost = new AddPost();
+		List<String> bookCategoryList =  addPostService.getBookCategoryList();
 		
 		model.addAttribute("thePost", thePost);
+		model.addAttribute("bookCategoryList", bookCategoryList);
 		
 		return "add-post/add-post";
 	}
@@ -53,6 +59,8 @@ public class AddPostController {
 			    
 	    if(bindingResult.hasErrors()){
 	    	//System.out.println("error" + bindingResult);
+	    	List<String> bookCategoryList =  addPostService.getBookCategoryList();
+	    	session.setAttribute("bookCategoryList", bookCategoryList);
 	    	return "add-post/add-post";
 	    }else{
 	    	
