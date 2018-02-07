@@ -27,9 +27,13 @@ public class HomeDAOImpl implements HomeDAO {
 		
 		Session currentSession = sessionFactory.getCurrentSession();
 		
-		Query<AddPost> theQuery = currentSession.createQuery("from AddPost", AddPost.class);
+		Query<AddPost> theQuery = currentSession.createQuery("from AddPost where status = 0", AddPost.class);
+		
+		theQuery.setMaxResults(8);
 		
 		List<AddPost> addPosts = theQuery.getResultList();
+		
+		//theQuery.setMaxResults(count);
  		
 		return addPosts;
 	}
@@ -41,7 +45,25 @@ public class HomeDAOImpl implements HomeDAO {
 		
 		AddPost addPost = currentSession.get(AddPost.class, theId);
 		
+		//System.out.println("AddPost Category : "+ addPost.getBookCategory());
+		
 		return addPost;
+	}
+
+	@Override
+	public List<AddPost> getCategoryBook(String bookCategory) {
+
+		Session currentSession = sessionFactory.getCurrentSession();
+
+		Query<AddPost> theQuery = currentSession.createQuery("from AddPost where book_category = '"+bookCategory + "' AND status = 0" , AddPost.class);
+		
+		theQuery.setMaxResults(3);
+		
+		List<AddPost> addPosts = theQuery.getResultList();
+		
+		//currentSession.getTransaction().commit();
+		
+		return addPosts;
 	}
 
 }
