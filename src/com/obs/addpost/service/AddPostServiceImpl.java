@@ -1,5 +1,7 @@
 package com.obs.addpost.service;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +22,10 @@ public class AddPostServiceImpl implements AddPostService {
 		addPostDao.savePost(newPost);
 	}
 	
-	
+	@Override
+	@Transactional
+	public List<String> getBookCategoryList(){
+		return addPostDao.getBookCategoryList();		
+	}
 	
 }

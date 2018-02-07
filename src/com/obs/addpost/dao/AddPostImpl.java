@@ -1,7 +1,9 @@
 package com.obs.addpost.dao;
 
-import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
+import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +31,18 @@ public class AddPostImpl implements AddPostDAO{
 		
 		session.save(newPost);
 		
+	}
+
+	@Override
+	public List<String> getBookCategoryList() {
+		
+		List<String> bookCategoryList = new ArrayList<>();
+		
+		Session session = sessionFactory.getCurrentSession();
+		Query<String> query = session.createQuery("FROM BookCategory");
+		bookCategoryList = query.getResultList();
+		
+		return bookCategoryList;
 	}
 
 }
