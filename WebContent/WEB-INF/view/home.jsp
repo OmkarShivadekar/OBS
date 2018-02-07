@@ -55,6 +55,8 @@
 
     <link href="${pageContext.request.contextPath}/resources/css/owl.carousel.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/resources/css/owl.theme.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/css/login.css" rel="stylesheet">
+    
 </head>
 
 <body>
