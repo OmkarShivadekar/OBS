@@ -16,5 +16,5 @@ public interface HomeDAO {
 
 	public AddPost getBook(int theId);
 
-	public List<AddPost> getCategoryBook(String bookCategory);
+	public List<AddPost> getCategoryBook(int bookCategory);
 }

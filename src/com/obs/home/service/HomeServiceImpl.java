@@ -37,7 +37,7 @@ public class HomeServiceImpl implements HomeService {
 
 	@Override
 	@Transactional
-	public List<AddPost> getCategoryBook(String bookCategory) {
+	public List<AddPost> getCategoryBook(int bookCategory) {
 
 		return homeDAO.getCategoryBook(bookCategory);
 	}
