@@ -51,11 +51,11 @@ public class HomeDAOImpl implements HomeDAO {
 	}
 
 	@Override
-	public List<AddPost> getCategoryBook(String bookCategory) {
+	public List<AddPost> getCategoryBook(int bookCategory) {
 
 		Session currentSession = sessionFactory.getCurrentSession();
 
-		Query<AddPost> theQuery = currentSession.createQuery("from AddPost where book_category = '"+bookCategory + "' AND status = 0" , AddPost.class);
+		Query<AddPost> theQuery = currentSession.createQuery("from AddPost where book_category_id = '"+bookCategory + "' AND status = 0" , AddPost.class);
 		
 		theQuery.setMaxResults(3);
 		
