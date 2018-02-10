@@ -104,7 +104,7 @@
                         <div class="row" id="productMain">
                             <div class="col-sm-6">
                                 <div id="mainImage">
-                                    <img src="${pageContext.request.contextPath}${bookinfo.photo1}" alt="" class="img-responsive" style="width: 350px;	 height: 510px;">
+                                    <img src="${pageContext.request.contextPath}/resources/images/${bookinfo.photo1}" alt="" class="img-responsive" style="width: 350px;	 height: 510px;">
                                 </div>
 
                                 <div class="ribbon sale">
@@ -139,21 +139,29 @@
                                 </div>
 
                                 <div class="row" id="thumbs">
-                                    <div class="col-xs-4">
-                                        <a href="${pageContext.request.contextPath}${bookinfo.photo1}" class="thumb">
-                                            <img src="${pageContext.request.contextPath}${bookinfo.photo1}" alt="" class="img-responsive" style="width: 120px; height: 120px;">
-                                        </a>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <a href="${pageContext.request.contextPath}${bookinfo.photo2}" class="thumb">
-                                            <img src="${pageContext.request.contextPath}${bookinfo.photo2}" alt="" class="img-responsive" style="width: 120px; height: 120px;">
-                                        </a>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <a href="${pageContext.request.contextPath}${bookinfo.photo3}" class="thumb">
-                                            <img src="${pageContext.request.contextPath}${bookinfo.photo3}" alt="" class="img-responsive" style="width: 120px; height: 120px;">
-                                        </a>
-                                    </div>
+                                	<c:if test="${bookinfo.photo1 != null }">
+	                                    <div class="col-xs-4">
+	                                        <a href="${pageContext.request.contextPath}/resources/images/${bookinfo.photo1}" class="thumb">
+	                                            <img src="${pageContext.request.contextPath}/resources/images/${bookinfo.photo1}" alt="" class="img-responsive" style="width: 120px; height: 120px;">
+	                                        </a>
+	                                    </div>
+                                    </c:if>
+                                    
+                                    <c:if test="${bookinfo.photo2 != null }">
+	                                    <div class="col-xs-4">
+	                                        <a href="${pageContext.request.contextPath}/resources/images/${bookinfo.photo2}" class="thumb">
+	                                            <img src="${pageContext.request.contextPath}/resources/images/${bookinfo.photo2}" alt="" class="img-responsive" style="width: 120px; height: 120px;">
+	                                        </a>
+	                                    </div>
+	                                </c:if>
+	                                
+	                                <c:if test="${bookinfo.photo3 != null }">    
+	                                    <div class="col-xs-4">
+	                                        <a href="${pageContext.request.contextPath}/resources/images/${bookinfo.photo3}" class="thumb">
+	                                            <img src="${pageContext.request.contextPath}/resources/images/${bookinfo.photo3}" alt="" class="img-responsive" style="width: 120px; height: 120px;">
+	                                        </a>
+	                                    </div>
+                                    </c:if>
                                 </div>
                             </div>
 
@@ -207,7 +215,7 @@
 	                                <div class="product">
 	                                    <div class="image">
 	                                        <a href="#">
-	                                            <img src="${pageContext.request.contextPath}${categoryBooks.photo1}" alt="" class="img-responsive image1" style="height: 190px; width:  190px;">
+	                                            <img src="${pageContext.request.contextPath}/resources/images/${categoryBooks.photo1}" alt="" class="img-responsive image1" style="height: 190px; width:  190px;">
 	                                        </a>
 	                                    </div>
 	                                    <div class="text">

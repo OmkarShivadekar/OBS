@@ -34,7 +34,7 @@ public class HomeDAOImpl implements HomeDAO {
 		List<AddPost> addPosts = theQuery.getResultList();
 		
 		//theQuery.setMaxResults(count);
- 		
+		
 		return addPosts;
 	}
 
