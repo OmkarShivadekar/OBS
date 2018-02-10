@@ -58,7 +58,7 @@ public class HomeContoller {
 		
 		List<AddPost> addPost1 = homeService.getCategoryBook(addPost.getBookCategory());
 		
-		System.out.println("addPost1 "+ addPost1);
+		//System.out.println("addPost1 "+ addPost1);
 		
 		theModel.addAttribute("categoryBooks", addPost1);
 		

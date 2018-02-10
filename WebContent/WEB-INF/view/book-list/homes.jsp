@@ -12,13 +12,13 @@
 					
                         <c:url var="bookInfo" value="/HOME/bookInfo">
 							<c:param name="bookId" value="${print.id}"></c:param>
-						</c:url>					
-					
+						</c:url>
+						
 						<div class="col-md-3 col-sm-4">
 	                    	<div class="product">
 	                        	<div class="image">
 	                                <a href="${bookInfo}">
-	                                    <img src="${pageContext.request.contextPath}${print.photo1}" alt="" class="img-responsive image1" style="height: 270px; width: 230px;">
+	                                    <img src="${pageContext.request.contextPath}/resources/images/${print.photo1}" alt="" class="img-responsive image1" style="height: 270px; width: 230px;">
 	                                </a>
 	                            </div>
 	                            
