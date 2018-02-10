@@ -19,12 +19,17 @@ public class SignUpDAOImpl implements SignUpDAO
 	@Autowired
 	private SessionFactory sessionFactory;
 
-	/* (non-Javadoc)
-	 * @see com.obs.dao.signup.SignUpDAO#newSignUp(com.obs.entity.SignUp)
-	 */
 	@Override
 	public void newSignUp(SignUp theSignUp)
 	{
+		Session currentSession=sessionFactory.getCurrentSession();
+		
+		currentSession.save(theSignUp);
+	}
+
+	@Override
+	public void loginFb(SignUp theSignUp) {
+		
 		Session currentSession=sessionFactory.getCurrentSession();
 		
 		currentSession.save(theSignUp);

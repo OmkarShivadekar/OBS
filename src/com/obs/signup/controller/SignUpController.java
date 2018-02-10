@@ -35,8 +35,14 @@ public class SignUpController
 	@PostMapping("/signUp")
 	public String signUp(@ModelAttribute("signUpForm") SignUp theSignUp) {
 
-		
 		signUpService.newSignUp(theSignUp);
+		return "redirect:/HOME/";
+	}
+	
+	@PostMapping("/loginFB")
+	public String loginFB(@ModelAttribute("loginFbForm") SignUp theSignUp)
+	{
+		signUpService.loginFb(theSignUp);
 		return "redirect:/HOME/";
 	}
 }
