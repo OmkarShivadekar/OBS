@@ -106,7 +106,7 @@
                         <div class="row" id="productMain">
                             <div class="col-sm-6">
                                 <div id="mainImage">
-                                    <img src="${pageContext.request.contextPath}${bookinfo.photo1}" alt="" class="img-responsive" style="width: 350px;	 height: 510px;">
+                                    <img src="/OBS/resources/images/${bookinfo.photo1}" alt="" class="img-responsive" style="width: 350px;	 height: 510px;">
                                 </div>
 
                                 <div class="ribbon sale">
@@ -145,18 +145,18 @@
 
                                 <div class="row" id="thumbs">
                                     <div class="col-xs-4">
-                                        <a href="${pageContext.request.contextPath}${bookinfo.photo1}" class="thumb">
-                                            <img src="${pageContext.request.contextPath}${bookinfo.photo1}" alt="" class="img-responsive" style="width: 120px; height: 120px;">
+                                        <a href="/OBS/resources/images/${bookinfo.photo1}" class="thumb">
+                                            <img src="/OBS/resources/images/${bookinfo.photo1}" alt="" class="img-responsive" style="width: 120px; height: 120px;">
                                         </a>
                                     </div>
                                     <div class="col-xs-4">
-                                        <a href="${pageContext.request.contextPath}${bookinfo.photo2}" class="thumb">
-                                            <img src="${pageContext.request.contextPath}${bookinfo.photo2}" alt="" class="img-responsive" style="width: 120px; height: 120px;">
+                                        <a href="/OBS/resources/images/${bookinfo.photo2}" class="thumb">
+                                            <img src="/OBS/resources/images/${bookinfo.photo2}" alt="" class="img-responsive" style="width: 120px; height: 120px;">
                                         </a>
                                     </div>
                                     <div class="col-xs-4">
-                                        <a href="${pageContext.request.contextPath}${bookinfo.photo3}" class="thumb">
-                                            <img src="${pageContext.request.contextPath}${bookinfo.photo3}" alt="" class="img-responsive" style="width: 120px; height: 120px;">
+                                        <a href="/OBS/resources/images/${bookinfo.photo3}" class="thumb">
+                                            <img src="/OBS/resources/images/${bookinfo.photo3}" alt="" class="img-responsive" style="width: 120px; height: 120px;">
                                         </a>
                                     </div>
                                 </div>
