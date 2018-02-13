@@ -104,7 +104,7 @@
                         <div class="row" id="productMain">
                             <div class="col-sm-6">
                                 <div id="mainImage">
-                                    <img src="${pageContext.request.contextPath}/resources/images/${bookinfo.photo1}" alt="" class="img-responsive" style="width: 350px;	 height: 510px;">
+                                    <img src="/OBS/resources/images/${bookinfo.photo1}" alt="" class="img-responsive" style="width: 350px;	 height: 510px;">
                                 </div>
 
                                 <div class="ribbon sale">
@@ -141,24 +141,24 @@
                                 <div class="row" id="thumbs">
                                 	<c:if test="${bookinfo.photo1 != null }">
 	                                    <div class="col-xs-4">
-	                                        <a href="${pageContext.request.contextPath}/resources/images/${bookinfo.photo1}" class="thumb">
-	                                            <img src="${pageContext.request.contextPath}/resources/images/${bookinfo.photo1}" alt="" class="img-responsive" style="width: 120px; height: 120px;">
+	                                        <a href="/OBS/resources/images/${bookinfo.photo1}" class="thumb">
+	                                            <img src="/OBS/resources/images/${bookinfo.photo1}" alt="" class="img-responsive" style="width: 120px; height: 120px;">
 	                                        </a>
 	                                    </div>
                                     </c:if>
                                     
                                     <c:if test="${bookinfo.photo2 != null }">
 	                                    <div class="col-xs-4">
-	                                        <a href="${pageContext.request.contextPath}/resources/images/${bookinfo.photo2}" class="thumb">
-	                                            <img src="${pageContext.request.contextPath}/resources/images/${bookinfo.photo2}" alt="" class="img-responsive" style="width: 120px; height: 120px;">
+	                                        <a href="/OBS/resources/images/${bookinfo.photo2}" class="thumb">
+	                                            <img src="/OBS/resources/images/${bookinfo.photo2}" alt="" class="img-responsive" style="width: 120px; height: 120px;">
 	                                        </a>
 	                                    </div>
 	                                </c:if>
 	                                
 	                                <c:if test="${bookinfo.photo3 != null }">    
 	                                    <div class="col-xs-4">
-	                                        <a href="${pageContext.request.contextPath}/resources/images/${bookinfo.photo3}" class="thumb">
-	                                            <img src="${pageContext.request.contextPath}/resources/images/${bookinfo.photo3}" alt="" class="img-responsive" style="width: 120px; height: 120px;">
+	                                        <a href="/OBS/resources/images/${bookinfo.photo3}" class="thumb">
+	                                            <img src="/OBS/resources/images/${bookinfo.photo3}" alt="" class="img-responsive" style="width: 120px; height: 120px;">
 	                                        </a>
 	                                    </div>
                                     </c:if>
@@ -215,13 +215,12 @@
 	                                <div class="product">
 	                                    <div class="image">
 	                                        <a href="#">
-	                                            <img src="${pageContext.request.contextPath}/resources/images/${categoryBooks.photo1}" alt="" class="img-responsive image1" style="height: 190px; width:  190px;">
+	                                            <img src="/OBS/resources/images/${categoryBooks.photo1}" alt="" class="img-responsive image1" style="height: 190px; width:  190px;">
 	                                        </a>
 	                                    </div>
 	                                    <div class="text">
 	                                        <h3>${categoryBooks.postTitle}</h3>
 	                                        <p class="price">$ ${categoryBooks.price}</p>
-	
 	                                    </div>
 	                                </div>
 	                                <!-- /.product -->

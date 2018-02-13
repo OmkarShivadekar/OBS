@@ -18,7 +18,8 @@
 	                    	<div class="product">
 	                        	<div class="image">
 	                                <a href="${bookInfo}">
-	                                    <img src="${pageContext.request.contextPath}/resources/images/${print.photo1}" alt="" class="img-responsive image1" style="height: 270px; width: 230px;">
+	                                    <img src="/OBS/resources/images/${print.photo1}" alt="" class="img-responsive image1" style="height: 270px; width: 230px;">
+
 	                                </a>
 	                            </div>
 	                            
