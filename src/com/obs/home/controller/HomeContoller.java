@@ -35,6 +35,8 @@ public class HomeContoller {
 		
 		List<AddPost> addPosts = homeService.getBooks();
 		
+		//System.out.println("AddPosts "+ addPosts);
+		
 		theModel.addAttribute("books", addPosts);
 		
 		return "home";
@@ -44,9 +46,21 @@ public class HomeContoller {
 	@GetMapping("/bookInfo")
 	public String showBookInfo(@RequestParam("bookId") int theId,Model theModel){
 		
+		SignUp newSignUp=new SignUp();
+		
+		theModel.addAttribute("signUpForm", newSignUp);
+		
 		AddPost addPost = homeService.getBook(theId);
 		
 		theModel.addAttribute("bookinfo", addPost);
+		
+		//System.out.println("AddPost Category : "+ addPost.getBookCategory());
+		
+		List<AddPost> addPost1 = homeService.getCategoryBook(addPost.getBookCategory());
+		
+		//System.out.println("addPost1 "+ addPost1);
+		
+		theModel.addAttribute("categoryBooks", addPost1);
 		
 		return "book-list/book-info";
 	}

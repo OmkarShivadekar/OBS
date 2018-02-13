@@ -378,11 +378,18 @@
                             <p class="text-center">
                                 <button class="btn btn-template-main"><i class="fa fa-sign-in"></i> Log in</button>
                             </p>
+                            
+                            <hr>
+                            <p>
+                            	<button type="button"  onclick="facebook()" class="loginBtn loginBtn--facebook">Login with Facebook</button>
+								<button type="button"  class="loginBtn loginBtn--google">Login with Google</button>
+                            </p>
+                            
 
                         </form>
 
                         <p class="text-center text-muted">Not registered yet?</p>
-                        <p class="text-center text-muted"><a href="customer-register.html"><strong>Register now</strong></a>! It is easy and done in 1&nbsp;minute and gives you access to special discounts and much more!</p>
+                        <p class="text-center text-muted"><a href="#"><strong>Register now</strong></a>! It is easy and done in 1&nbsp;minute and gives you access to special discounts and much more!</p>
 
                     </div>
                 </div>
@@ -414,10 +421,38 @@
                             <p class="text-center">
                                 <button class="btn btn-template-main"><i class="fa fa-sign-in"></i> Sign Up</button>
                             </p>
+                            <hr>
+                            <p>
+                            	<button type="button"  onclick="facebook()" class="loginBtn loginBtn--facebook">Login with Facebook</button>
+								<button  type="button"  class="loginBtn loginBtn--google">Login with Google</button>
+                            </p>
                         </form:form>
+                        
+                         <%-- <form:form action="loginFB" modelAttribute="loginFbForm" method="POST">
+                        	<form:hidden path=""/>
+                        	<form:input path="Name" class="form-control" placeholder="Name..." required="required"/>
+                        	
+                        </form:form> --%>
+                        
+                        <form action="">
+                        	<input type="text"  id="name"><br>
+                        	<input type="text"  id="email"><br>
+                        	<input type="text"  id="location"><br>
+                        	<input type="text"  id="bday">
+                        </form> 
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- *** Registration MODAL END *** -->
+        
+        <script type="text/javascript">
+        	
+        function facebook()
+        {
+        	alert('working');
+        }
+        	
+        
+        </script>

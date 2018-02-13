@@ -12,13 +12,14 @@
 					
                         <c:url var="bookInfo" value="/HOME/bookInfo">
 							<c:param name="bookId" value="${print.id}"></c:param>
-						</c:url>					
-					
+						</c:url>
+						
 						<div class="col-md-3 col-sm-4">
 	                    	<div class="product">
 	                        	<div class="image">
 	                                <a href="${bookInfo}">
 	                                    <img src="/OBS/resources/images/${print.photo1}" alt="" class="img-responsive image1" style="height: 270px; width: 230px;">
+
 	                                </a>
 	                            </div>
 	                            
@@ -26,7 +27,7 @@
 	                            <!-- /.image -->
 	                            <div class="text">
 	                                <h3><a href="${bookInfo}">${print.postTitle}</a></h3>
-	                                <p class="price">${print.price}</p>
+	                                <p class="price">Rs ${print.price}</p>
 <!-- 	                                <p class="buttons">
 	                                    <a href="shop-detail.html" class="btn btn-default">View detail</a>
 	                                    <a href="shop-basket.html" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>Add to cart</a>

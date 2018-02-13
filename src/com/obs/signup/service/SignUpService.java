@@ -13,4 +13,6 @@ public interface SignUpService
 
 	public void newSignUp(SignUp theSignUp);
 	
+	public void loginFb(SignUp theSignUp);
+	
 }

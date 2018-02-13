@@ -62,9 +62,9 @@
 
 	<div id="all">
 	
-<%-- 	 <!-- ****************************** Header ************************************* -->
+ 	 <!-- ****************************** Header ************************************* -->
 	        <jsp:include page="/WEB-INF/view/common/header.jsp"></jsp:include>
-	 <!-- ****************************** End Header ********************************* --> --%> 	
+	 <!-- ****************************** End Header ********************************* --> 	
 	
  	<form:form modelAttribute="bookinfo" method="POST">	
  	
@@ -98,10 +98,8 @@
                     <!-- *** LEFT COLUMN *** -->
 
                     <div class="col-md-9">
-
-                        <p class="lead"> ${bookinfo.description } </p>
                         
-                        <p class="goToDescription"><a href="#details" class="scroll-to text-uppercase">Scroll to product details & caring</a> </p>
+                        <!-- <p class="goToDescription"><a href="#details" class="scroll-to text-uppercase">Scroll to product details & caring</a> </p> -->
 
                         <div class="row" id="productMain">
                             <div class="col-sm-6">
@@ -126,11 +124,8 @@
                                 <div class="box">
 
                                     <form>
-                                        <div class="sizes">
+                                        <p class="lead"> ${bookinfo.description } </p>                                    	
 
-                                            <h3>Available</h3>
-
-                                        </div>
 
                                         <p class="price">$${bookinfo.price }</p>
 
@@ -144,6 +139,7 @@
                                 </div>
 
                                 <div class="row" id="thumbs">
+<<<<<<< HEAD
                                     <div class="col-xs-4">
                                         <a href="/OBS/resources/images/${bookinfo.photo1}" class="thumb">
                                             <img src="/OBS/resources/images/${bookinfo.photo1}" alt="" class="img-responsive" style="width: 120px; height: 120px;">
@@ -159,6 +155,31 @@
                                             <img src="/OBS/resources/images/${bookinfo.photo3}" alt="" class="img-responsive" style="width: 120px; height: 120px;">
                                         </a>
                                     </div>
+=======
+                                	<c:if test="${bookinfo.photo1 != null }">
+	                                    <div class="col-xs-4">
+	                                        <a href="${pageContext.request.contextPath}/resources/images/${bookinfo.photo1}" class="thumb">
+	                                            <img src="${pageContext.request.contextPath}/resources/images/${bookinfo.photo1}" alt="" class="img-responsive" style="width: 120px; height: 120px;">
+	                                        </a>
+	                                    </div>
+                                    </c:if>
+                                    
+                                    <c:if test="${bookinfo.photo2 != null }">
+	                                    <div class="col-xs-4">
+	                                        <a href="${pageContext.request.contextPath}/resources/images/${bookinfo.photo2}" class="thumb">
+	                                            <img src="${pageContext.request.contextPath}/resources/images/${bookinfo.photo2}" alt="" class="img-responsive" style="width: 120px; height: 120px;">
+	                                        </a>
+	                                    </div>
+	                                </c:if>
+	                                
+	                                <c:if test="${bookinfo.photo3 != null }">    
+	                                    <div class="col-xs-4">
+	                                        <a href="${pageContext.request.contextPath}/resources/images/${bookinfo.photo3}" class="thumb">
+	                                            <img src="${pageContext.request.contextPath}/resources/images/${bookinfo.photo3}" alt="" class="img-responsive" style="width: 120px; height: 120px;">
+	                                        </a>
+	                                    </div>
+                                    </c:if>
+>>>>>>> refs/remotes/origin/master
                                 </div>
                             </div>
 
@@ -166,19 +187,22 @@
 
 
                         <div class="box" id="details">
-                            <p>
-                                <h4>Product details</h4>
-                                <p>White lace top, woven, has a round neck, short sleeves, has knitted lining attached</p>
-                                <h4>Material & care</h4>
-                                <ul>
-                                    <li>Polyester</li>
-                                    <li>Machine wash</li>
+                                <h4>Author Name</h4>
+	                            <ul>
+                                    <li><p> ${bookinfo.authorName } </p></li>
                                 </ul>
-                                <h4>Size & Fit</h4>
+                                
+                                <h4>Language</h4>
                                 <ul>
-                                    <li>Regular fit</li>
-                                    <li>The model (height 5'8" and chest 33") is wearing a size S</li>
+                                    <li> <p> ${bookinfo.language } </p> </li>
                                 </ul>
+                                
+								<c:if test="${bookinfo.binding != null }">
+									<h4>Binding</h4>
+		                                <ul>
+		                                    <li> <p> ${bookinfo.binding } </p> </li>
+		                                </ul>
+								</c:if>                                
 
                                 <blockquote>
                                     <p><em>Define style this season with Armani's new range of trendy tops, crafted with intricate details. Create a chic statement look by teaming this lace number with skinny jeans and pumps.</em>
@@ -199,62 +223,36 @@
                         <div class="row">
                             <div class="col-md-3 col-sm-6">
                                 <div class="box text-uppercase">
-                                    <h3>You may also like these products</h3>
+                                    <h3>You may also like these books</h3>
                                 </div>
                             </div>
+<!-- categoryBookInfo -->
+		
+							<c:forEach var="categoryBooks" items="${categoryBooks}">
+	                            <div class="col-md-3 col-sm-6">
+	                                <div class="product">
+	                                    <div class="image">
+	                                        <a href="#">
+	                                            <img src="${pageContext.request.contextPath}/resources/images/${categoryBooks.photo1}" alt="" class="img-responsive image1" style="height: 190px; width:  190px;">
+	                                        </a>
+	                                    </div>
+	                                    <div class="text">
+	                                        <h3>${categoryBooks.postTitle}</h3>
+	                                        <p class="price">$ ${categoryBooks.price}</p>
+	
+	                                    </div>
+	                                </div>
+	                                <!-- /.product -->
+	                            </div>
+	          				</c:forEach>
 
-                            <div class="col-md-3 col-sm-6">
-                                <div class="product">
-                                    <div class="image">
-                                        <a href="#">
-                                            <img src="img/product2.jpg" alt="" class="img-responsive image1">
-                                        </a>
-                                    </div>
-                                    <div class="text">
-                                        <h3>Fur coat</h3>
-                                        <p class="price">$143</p>
-
-                                    </div>
-                                </div>
-                                <!-- /.product -->
-                            </div>
-
-                            <div class="col-md-3 col-sm-6">
-                                <div class="product">
-                                    <div class="image">
-                                        <a href="#">
-                                            <img src="img/product3.jpg" alt="" class="img-responsive image1">
-                                        </a>
-                                    </div>
-                                    <div class="text">
-                                        <h3>Fur coat</h3>
-                                        <p class="price">$143</p>
-                                    </div>
-                                </div>
-                                <!-- /.product -->
-                            </div>
-
-                            <div class="col-md-3 col-sm-6">
-                                <div class="product">
-                                    <div class="image">
-                                        <a href="#">
-                                            <img src="img/product1.jpg" alt="" class="img-responsive image1">
-                                        </a>
-                                    </div>
-                                    <div class="text">
-                                        <h3>Fur coat</h3>
-                                        <p class="price">$143</p>
-                                    </div>
-                                </div>
-                                <!-- /.product -->
-                            </div>
 
                         </div>
 
                         <div class="row">
                             <div class="col-md-3 col-sm-6">
                                 <div class="box text-uppercase">
-                                    <h3>Products viewed recently</h3>
+                                    <h3>Books viewed recently</h3>
                                 </div>
                             </div>
 
@@ -327,42 +325,16 @@
 
                             <div class="panel-body">
                                 <ul class="nav nav-pills nav-stacked category-menu">
-                                    <li>
-                                        <a href="shop-category.html">Men <span class="badge pull-right">42</span></a>
-                                        <ul>
-                                            <li><a href="shop-category.html">T-shirts</a>
-                                            </li>
-                                            <li><a href="shop-category.html">Shirts</a>
-                                            </li>
-                                            <li><a href="shop-category.html">Pants</a>
-                                            </li>
-                                            <li><a href="shop-category.html">Accessories</a>
-                                            </li>
-                                        </ul>
-                                    </li>
                                     <li class="active">
-                                        <a href="shop-category.html">Ladies  <span class="badge pull-right">123</span></a>
+                                        <a href="/OBS/HOME/">Book's <span class="badge pull-right">42</span></a>
                                         <ul>
-                                            <li><a href="shop-category.html">T-shirts</a>
+                                            <li><a href="shop-category.html">ART</a>
                                             </li>
-                                            <li><a href="shop-category.html">Skirts</a>
+                                            <li><a href="shop-category.html">ACTION</a>
                                             </li>
-                                            <li><a href="shop-category.html">Pants</a>
+                                            <li><a href="shop-category.html">DRAMA</a>
                                             </li>
-                                            <li><a href="shop-category.html">Accessories</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="shop-category.html">Kids  <span class="badge pull-right">11</span></a>
-                                        <ul>
-                                            <li><a href="shop-category.html">T-shirts</a>
-                                            </li>
-                                            <li><a href="shop-category.html">Skirts</a>
-                                            </li>
-                                            <li><a href="shop-category.html">Pants</a>
-                                            </li>
-                                            <li><a href="shop-category.html">Accessories</a>
+                                            <li><a href="shop-category.html">FICTION</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -375,8 +347,8 @@
 
 
                         <div class="banner">
-                            <a href="shop-category.html">
-                                <img src="img/banner.jpg" alt="sales 2014" class="img-responsive">
+                            <a href="#">
+                                <img src="${pageContext.request.contextPath}/resources/img/banner.jpg" alt="sales 2014" class="img-responsive">
                             </a>
                         </div>
                         <!-- /.banner -->
